@@ -1,0 +1,20 @@
+{
+  "name": "mobile-wedding-invitations",
+  "version": "1.0.0",
+  "description": "모바일 청첩장 리액트로 만들어보기 위한 Repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssu2030/mobile-wedding-invitations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssu2030/mobile-wedding-invitations/issues"
+  },
+  "homepage": "https://github.com/ssu2030/mobile-wedding-invitations#readme"
+}
