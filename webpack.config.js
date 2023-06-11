@@ -39,9 +39,9 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: './dist', 
+    static: './dist', 
     // 웹팩 개발 서버가 서비스할 정적 파일의 위치를 지정합니다.
-    port: 150813, 
+    port: 7777, 
     // 웹팩 개발 서버가 실행될 포트 번호를 지정합니다.
   },
 }; 
