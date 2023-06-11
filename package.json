@@ -4,7 +4,7 @@
   "description": "모바일 청첩장 리액트로 만들어보기 위한 Repo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
