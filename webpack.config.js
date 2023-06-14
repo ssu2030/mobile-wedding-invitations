@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // HTML 파일을 생성, 웹팩으로 빌드된 스크립트를 자동주입
 const path = require('path');
 
@@ -16,6 +17,12 @@ module.exports = {
         exclude: /node_modules/, 
         // node_modules 폴더는 제외(웹팩이 이 폴더의 파일을 처리하려고 하면 성능이 저하됨)
       },
+      {test: /\.(css|s[ac]ss)$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader'
+      ]},
       {
         test: /\.(png|jpe?g|webp|webm)$/i,
         use: [
@@ -67,6 +74,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+  }),
     // HtmlWebpackPlugin을 플러그인으로 추가
     // 이 플러그인은 src/index.html을 기반으로 HTML 파일을 생성 및 번들링된 파일 주입
   ],
