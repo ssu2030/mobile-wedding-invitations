@@ -32,6 +32,11 @@
         "baseUrl": ".",
         // import 처리 시의 alias.
         // DOM API 등의 type 정의들 사용.
-        "lib": ["DOM", "ES2019"]
-    },
+        "lib": ["DOM", "ES2019"],
+        "paths": {
+            "*": ["src/*"],
+            "@video/*": ["./src/resource/video/*"],
+            "@photo/*": ["./src/resource/photo/*"]
+        }
+    }
 }

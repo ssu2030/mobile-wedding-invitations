@@ -4,7 +4,7 @@
   "description": "모바일 청첩장 리액트로 만들어보기 위한 Repo",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --mode development",
+    "serve": "webpack serve --mode development --config webpack.config.js",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.4",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",

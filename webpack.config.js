@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 // HTML 파일을 생성, 웹팩으로 빌드된 스크립트를 자동주입
+const path = require('path');
 
 // 웹팩을 실행할 때 사용
 module.exports = { 
@@ -15,12 +16,44 @@ module.exports = {
         exclude: /node_modules/, 
         // node_modules 폴더는 제외(웹팩이 이 폴더의 파일을 처리하려고 하면 성능이 저하됨)
       },
+      {
+        test: /\.(png|jpe?g|webp|webm)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]', // 파일명을 유지하도록 설정
+              outputPath: 'assets', // 번들링된 파일이 저장될 경로
+            },
+          }
+        ]
+      },
+      {
+        test: /\.mp4$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets',
+            },
+          },
+        ],
+      },
     ],
   },
 
   resolve: {
     extensions: ['.tsx', '.ts', '.js'], 
     // 웹팩이 파일을 해석할 때, 주어진 확장자를 가진 파일을 찾도록 설정 (import나 require문에서 확장자를 생략)
+    modules: [
+      path.resolve(__dirname, 'src'), // 원하는 root 디렉토리를 추가합니다.
+      'node_modules', // 기본적으로 node_modules 디렉토리도 탐색합니다.
+    ],
+    alias: {
+      '@video': path.resolve(__dirname, 'src/resource/video'),
+      '@photo': path.resolve(__dirname, 'src/resource/photo'),
+    }
   },
 
   output: {
