@@ -6,10 +6,17 @@ const VideoComponent: React.FC<VideoComponentProps> = ({
   resources,
 }: VideoComponentProps) => {
   const resourcesArray: React.JSX.Element[] = resources.map(
-    (resource: contentResource) => {
-      return <source src={resource.resourcePath} type={resource.type} />;
+    (resource: contentResource, index: number) => {
+      return (
+        <source
+          key={`${index}_videoComponent`}
+          src={resource.resourcePath}
+          type={resource.type}
+        />
+      );
     }
   );
+
   return (
     <video autoPlay loop muted>
       {resourcesArray}

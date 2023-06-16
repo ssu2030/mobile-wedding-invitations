@@ -2,35 +2,3 @@
     max-width: 430px;
     max-height: 100%;
 }
-
-// styles.css 파일에 해당 스타일을 추가합니다.
-/* 캔버스 스타일 */
-#canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  /* 꽃가루 스타일 */
-  .petal {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-    animation: falling 5s infinite;
-  }
-  
-  /* 꽃가루 애니메이션 */
-  @keyframes falling {
-    0% {
-      transform: translateY(-100px) translateX(0);
-    }
-    100% {
-      transform: translateY(100vh) translateX(200px);
-      opacity: 0;
-    }
-  }

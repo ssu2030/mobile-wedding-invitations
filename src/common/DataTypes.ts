@@ -9,7 +9,7 @@ export interface VideoComponentProps {
     resources: contentResource[];
 }
 
-export type ImageTypes = "image/jpeg" | "image/avif" | "image/wepb" | undefined;
+export type ImageTypes = "image/jpeg" | "image/avif" | "image/webp" | undefined;
 
 export interface ImageComponentProps  {
     resources: contentResource[];
