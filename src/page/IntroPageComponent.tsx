@@ -7,7 +7,7 @@ import * as animationData from "resource/heartAnimation.json";
 // import introVideo_mp4 from "@video/intro_page_video.mp4";
 // import introVideo_webm from "@video/intro_page_video.webm";
 
-import styles from "style/MainPage.module.scss";
+import styles from "style/IntroPage.module.scss";
 import { useNavigate } from "react-router-dom";
 
 const IntroPageComponent: React.FC = () => {
@@ -41,7 +41,7 @@ const IntroPageComponent: React.FC = () => {
           <div className={styles.secondLinetext}>10월 22일 오후 12시</div>
           <div className={styles.thirdLinetext}>서울 남산예술원</div>
         </div>
-        <div onClick={handleClick}>
+        <div className={styles.nextPageAnimationWrapper} onClick={handleClick}>
           <Lottie options={defaultOptions} height={120} width={100} />
         </div>
       </div>
