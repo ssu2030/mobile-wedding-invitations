@@ -1,30 +1,32 @@
-import React from "react";
-import Lottie from "react-lottie";
+import React, { useEffect, useRef } from "react";
 import { contentResource } from "common/DataTypes";
 import ImageComponent from "component/ImageComponent";
 import intro_img from "@photo/intro_img.webp";
 import * as animationData from "resource/heartAnimation.json";
 // import introVideo_mp4 from "@video/intro_page_video.mp4";
 // import introVideo_webm from "@video/intro_page_video.webm";
-
+import lottie from "lottie-web";
 import styles from "style/IntroPage.module.scss";
 import { useNavigate } from "react-router-dom";
 
 const IntroPageComponent: React.FC = () => {
   const navigate = useNavigate();
-
+  const container = useRef(null);
   const handleClick = () => {
     navigate("/invitation");
   };
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData.default, // animation.json 파일에서 불러온 애니메이션 데이터
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid meet",
-    },
-  };
+  useEffect(() => {
+    if (container.current !== null) {
+      lottie.loadAnimation({
+        container: container.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: animationData.default,
+      });
+    }
+  }, []);
 
   const imageResource: contentResource[] = [
     { resourcePath: intro_img, type: "image/webp" },
@@ -42,7 +44,7 @@ const IntroPageComponent: React.FC = () => {
           <div className={styles.thirdLinetext}>서울 남산예술원</div>
         </div>
         <div className={styles.nextPageAnimationWrapper} onClick={handleClick}>
-          <Lottie options={defaultOptions} height={120} width={100} />
+          <div ref={container} />
         </div>
       </div>
     </div>

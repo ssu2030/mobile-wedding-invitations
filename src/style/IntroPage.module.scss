@@ -49,17 +49,20 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
     padding: 8px;
-    width: 45%;
+    width:50%;
+    overflow: hidden;
 }
 
 .nextPageAnimationWrapper {
-    width: 55%;
+    width: 50%;
+    overflow: hidden;
 }
 
 .imgOutWrapper {
