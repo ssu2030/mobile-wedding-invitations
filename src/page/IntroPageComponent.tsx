@@ -32,12 +32,12 @@ const IntroPageComponent: React.FC = () => {
     { resourcePath: intro_img, type: "image/webp" },
   ];
   return (
-    <div>
-      <ImageComponent resources={imageResource} />
+    <div className={styles.introPageWrapper}>
       <div className={styles.firstLinetext}>
         이 <br /> 동<br /> 호 <br /> ,
         <br /> 이 <br /> 세<br /> 미
       </div>
+      <ImageComponent resources={imageResource} />
       <div className={styles.textOutWrapper}>
         <div className={styles.textWrapper}>
           <div className={styles.secondLinetext}>10월 22일 오후 12시</div>

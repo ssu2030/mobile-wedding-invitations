@@ -1,9 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 
-.jejumyeongjo * { 
- font-family: 'Jeju Myeongjo', serif;
-}
 
 .mainWrapper {
     width: 100%;
@@ -18,83 +13,7 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    min-width: none;
-    max-width: 768px;
+    max-width: 440px;
     max-height: 100%;
     margin: 0 auto;
 }
-
-.firstLinetext {
-    position: absolute;
-    line-height: 160%;
-    color: white;
-    top:10px;
-    left: 90%;
-    font-size: 25px;
-    letter-spacing: 1ch;
-    font-family: 'Jeju Myeongjo', serif;
-    user-select: none;
-    text-shadow: 2px 2px 4px black;
-    opacity: 0; /* 초기 투명도 설정 */
-    animation: fadeIn 0.5s ease-in-out 1s forwards; /* 애니메이션 적용 */
-}
-
-.secondLinetext {
-    color: white;
-    font-size: 17px;
-    letter-spacing: 1px;
-    font-family: 'Gowun Batang', serif;
-    user-select: none;
-    text-shadow: 2px 2px 4px black;
-    text-align: left;
-    padding-top:10px;
-    padding-left:10px;
-    opacity: 0; /* 초기 투명도 설정 */
-    animation: fadeIn 1.2s ease-in-out 1.5s forwards; /* 애니메이션 적용 */
-}
-
-
-.thirdLinetext {
-    padding-left:10px;
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-family: 'Gowun Batang', serif;
-    user-select: none;
-    text-shadow: 2px 2px 4px black;
-    opacity: 0; /* 초기 투명도 설정 */
-    animation: fadeIn 1.7s ease-in-out 2s forwards; /* 애니메이션 적용 */
-}
-.textOutWrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.textWrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: 45%;
-}
-
-.imgOutWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imgWrapper {
-    opacity: 0; /* 초기 투명도 설정 */
-    animation: fadeIn 1.7s ease-in-out 2s forwards; /* 애니메이션 적용 */
-    width: 60px;
-    height: 60px;
-}
-
-@keyframes fadeIn {
-    from {
-      opacity: 0; /* 시작 시 투명도 */
-    }
-    to {
-      opacity: 1; /* 끝 시 투명도 */
-    }
-  }
