@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import IntroPageComponent from "page/IntroPageComponent";
-import daisy_img from "@photo/daisyicon.png";
 import styles from "style/MainPage.module.scss";
 import DialogComponent from "component/DialogComponent";
 
@@ -10,12 +9,10 @@ const MainPageComponent: React.FC = () => {
   const currentUrl = useLocation();
 
   useEffect(() => {
-    
-    console.log("@@@@@@", currentUrl)
     if (currentUrl.pathname !== "/invitation" ) {
       const timeout = setTimeout(() => {
         setDialogOpen(true);
-      }, 3000);
+      }, 5000);
 
       return () => clearTimeout(timeout);
     }

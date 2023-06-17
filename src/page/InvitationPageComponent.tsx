@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import styles from "style/InvitationPageComponent.module.scss"
 
 const InvitationPageComponent: React.FC = () => {
   const navigate = useNavigate();
+  const [backgroundColor, setBackgrountColor] =useState("black");
 
   const handlerBackButtonClick = () => {
     navigate("/");
   };
 
   return (
-    <>
-      <input type="button" onClick={handlerBackButtonClick} />
-      디스크립션 페이지
-    </>
+      <div className={styles.mainWrapper}>
+        <div className={styles.centerDivision} style={{background: backgroundColor}} >
+          <input type="button" onClick={handlerBackButtonClick} value={"sss"} />
+          <input type="button" onClick={()=>{setBackgrountColor("white")}} value={"sss"} />
+        </div>
+    </div>
+    
   );
 };
-
 export default InvitationPageComponent;

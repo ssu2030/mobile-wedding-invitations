@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from 'style/DialogComponent.module.scss';
 
 interface DialogProps {
@@ -7,7 +8,11 @@ interface DialogProps {
 }
 
 const DialogComponent: React.FC<DialogProps> = ({  isOpen, handleClose }) => {
-  
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate("/invitation");
+      };
 
   return (
     <div>
@@ -18,8 +23,13 @@ const DialogComponent: React.FC<DialogProps> = ({  isOpen, handleClose }) => {
               {"함께 자리를 빛내주시겠습니까"}
               </div>
               <div className={styles.dialogContentCheckBoxContent}>
-                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox"/> Yes </label>
-                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox"/> Sorry </label>
+                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox"
+                onClick={handleClick}
+                /> Yes </label>
+                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox" onClick={()=>{
+                    handleClose();
+                    window.close();
+                }}/> Sorry </label>
               </div>
           </div>
         </div>
