@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
-import IntroPageComponent from "page/IntroPageComponent";
+
+import LoadingComponent from "component/LoadingComponent";
+
+const LazyIntroPageComponent = React.lazy(() => import("page/IntroPageComponent"));
+const LazyDialogComponent = React.lazy(() => import("component/DialogComponent"));
+
+
 import styles from "style/MainPage.module.scss";
-import DialogComponent from "component/DialogComponent";
 
 const MainPageComponent: React.FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -12,7 +17,7 @@ const MainPageComponent: React.FC = () => {
     if (currentUrl.pathname !== "/invitation" ) {
       const timeout = setTimeout(() => {
         setDialogOpen(true);
-      }, 5000);
+      }, 4000);
 
       return () => clearTimeout(timeout);
     }
@@ -21,13 +26,16 @@ const MainPageComponent: React.FC = () => {
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.centerDivision}>
-        <IntroPageComponent />
-        <DialogComponent
-          isOpen={dialogOpen}
-          handleClose={() => {
-            setDialogOpen(false);
-          }}
-        /></div>
+        <Suspense fallback={<LoadingComponent/>} >  
+          <LazyIntroPageComponent />
+          <LazyDialogComponent
+            isOpen={dialogOpen}
+            handleClose={() => {
+              setDialogOpen(false);
+            }}
+          /> 
+        </Suspense> 
+        </div>
     </div>
   );
 };

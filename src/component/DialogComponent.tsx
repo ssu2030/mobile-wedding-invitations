@@ -26,10 +26,9 @@ const DialogComponent: React.FC<DialogProps> = ({  isOpen, handleClose }) => {
                 <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox"
                 onClick={handleClick}
                 /> Yes </label>
-                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox" onClick={()=>{
-                    handleClose();
-                    window.close();
-                }}/> Sorry </label>
+                <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox" onClick={
+                    handleClose
+                }/> Sorry </label>
               </div>
           </div>
         </div>
