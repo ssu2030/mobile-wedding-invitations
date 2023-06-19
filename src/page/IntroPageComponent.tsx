@@ -10,14 +10,13 @@ import { useNavigate } from "react-router-dom";
 const IntroPageComponent: React.FC = () => {
   const navigate = useNavigate();
   const container = useRef(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleClick = () => {
     navigate("/invitation");
   };
 
   useEffect(() => {
-    if (container.current !== null && imageLoaded) {
+    if (container.current !== null) {
       lottie.loadAnimation({
         container: container.current,
         renderer: "svg",
@@ -26,15 +25,11 @@ const IntroPageComponent: React.FC = () => {
         animationData: animationData.default,
       });
     }
-  }, [imageLoaded]);
+  }, []);
 
   const imageResource: contentResource[] = [
     { resourcePath: intro_img, type: "image/webp" },
   ];
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
 
   return (
     <div className={styles.introPageWrapper}>
@@ -42,19 +37,13 @@ const IntroPageComponent: React.FC = () => {
         이 <br /> 동<br /> 호 <br /> ,
         <br /> 이 <br /> 세<br /> 미
       </div>
-      <ImageComponent
-        resources={imageResource}
-        onLoad={handleImageLoad}
-      />
+      <ImageComponent resources={imageResource} />
       <div className={styles.textOutWrapper}>
         <div className={styles.textWrapper}>
           <div className={styles.secondLinetext}>10월 22일 오후 12시</div>
           <div className={styles.thirdLinetext}>서울 남산예술원</div>
         </div>
-        <div
-          className={styles.nextPageAnimationWrapper}
-          onClick={handleClick}
-        >
+        <div className={styles.nextPageAnimationWrapper} onClick={handleClick}>
           <div ref={container} />
         </div>
       </div>

@@ -13,5 +13,4 @@ export type ImageTypes = "image/jpeg" | "image/avif" | "image/webp" | undefined;
 
 export interface ImageComponentProps  {
     resources: contentResource[];
-    onLoad: ()=>void;
 }
