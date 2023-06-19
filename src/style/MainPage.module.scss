@@ -1,4 +1,29 @@
 
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('../resource/font/subset-MapoFlowerIsland.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('../resource/font/subset-MapoGoldenPier.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GangwonEduAll';
+    src: url('../resource/font/subset-GangwonEduAllBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 .mainWrapper {
     width: 100%;
