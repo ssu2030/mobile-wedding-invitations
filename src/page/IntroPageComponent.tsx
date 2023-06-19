@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { contentResource } from "common/DataTypes";
 import ImageComponent from "component/ImageComponent";
 import intro_img from "@photo/intro_img.webp";
@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const IntroPageComponent: React.FC = () => {
   const navigate = useNavigate();
   const container = useRef(null);
+  const pictureContainer = useRef<HTMLPictureElement>();
 
   const handleClick = () => {
     navigate("/invitation");

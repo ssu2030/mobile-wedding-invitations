@@ -17,3 +17,8 @@
     max-height: 800px;
     margin: 0 auto;
 }
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+}

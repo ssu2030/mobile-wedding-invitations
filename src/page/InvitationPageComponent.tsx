@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import styles from "style/InvitationPageComponent.module.scss";
 import InvitationMessageComponent from "./invitationDetail/InvitationMessageComponent";
+import InvitationIntroMessageComponent from "./invitationDetail/InvitationIntroMessageComponent";
 
 const InvitationPageComponent: React.FC = () => {
   const navigate = useNavigate();
@@ -26,7 +27,10 @@ const InvitationPageComponent: React.FC = () => {
           }}
           value={"sss"}
         />
-        <InvitationMessageComponent />
+        <div className={styles.contentWrapper}>
+          <InvitationIntroMessageComponent />
+          <InvitationMessageComponent />
+        </div>
       </div>
     </div>
   );

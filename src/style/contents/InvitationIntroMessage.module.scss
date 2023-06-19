@@ -1,0 +1,17 @@
+.mainWrapper {
+    position: relative;
+}
+
+.imageWrapper {
+    position: absolute;
+}
+
+.lottieAnimationWrapper {
+    position: absolute;
+    z-index: 9999;
+}
+
+.headerMessageWrapper {
+    background-color: white;
+    padding:10px;
+}
