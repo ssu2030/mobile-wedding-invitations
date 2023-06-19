@@ -1,0 +1,21 @@
+.messageWrapper {
+    padding-left: 20px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'Nanum SeongSirCe', serif;
+    font-size: 24px;
+    
+    @media screen and (max-width: 400px) {
+        font-size: 24px * 0.9;
+    }
+
+    @media screen and (max-width: 300px) {
+        font-size: 24px * 0.7;
+    }
+
+    letter-spacing: 1px;
+    user-select: none;
+}

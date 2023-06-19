@@ -23,6 +23,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Nanum SeongSirCe';
+    src: url('../resource/font/subset-NanumSeongSirCe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 
 .mainWrapper {
@@ -39,6 +48,7 @@
     width: 100%;
     height: fit-content;
     max-width: 440px;
-    max-height: 100%;
+    height: 100%;
+    max-height: 800px;
     margin: 0 auto;
 }

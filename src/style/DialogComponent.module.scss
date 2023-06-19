@@ -22,62 +22,56 @@
     animation: dialogFadeIn 1.1s ease-in-out 1.3s forwards; /* 애니메이션 적용 */
   }
 
-
-  @keyframes dialogContentFadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.9;
-    }
-  }
-  
-  
-  .dialogContentWrapper {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 300px;
-    min-height: 70px;
-    max-height: 70px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+@keyframes dialogContentFadeIn {
+  from {
     opacity: 0;
-    animation: dialogContentFadeIn 1.2s ease-in-out 1.5s forwards; /* 애니메이션 적용 */
-    
   }
-  
-  .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  to {
+    opacity: 0.9;
   }
-  
-  .dialogContentTextContent {
-      font-family: 'MapoGoldenPier', serif;
-      margin-top: 15px;
-      text-align: center;
-  }
+}
 
-  .dialogContentCheckBoxContent {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 20px;
-  }
+.dialogContentWrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 300px;
+  max-height: 70px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: dialogContentFadeIn 1.2s ease-in-out 1.5s forwards; /* 애니메이션 적용 */
+}
 
-  .checkboxStyles {
-      width: 20px;
-  }
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-  .labelStyle {
-    font-family: 'MapoGoldenPier', serif;
-    font-size: 12px;
-    align-items: center;
-    display: flex;
-    width: 80px;
-    
-  }
-  
+.dialogContentTextContent {
+  font-family: 'MapoGoldenPier', serif;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.dialogContentCheckBoxContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.checkboxStyles {
+  width: 20px;
+}
+
+.labelStyle {
+  font-family: 'MapoGoldenPier', serif;
+  font-size: 12px;
+  align-items: center;
+  display: flex;
+  width: 80px;
+}
