@@ -5,7 +5,12 @@ const path = require('path');
 
 // 웹팩을 실행할 때 사용
 module.exports = { 
-  entry: './src/index.tsx', 
+  mode:"development",
+  entry: './src/index.tsx',
+  devtool: "source-map", 
+  optimization: {
+    minimize: false,
+  },
   // 엔트리 포인트 적어줌
   module: {
     rules: [

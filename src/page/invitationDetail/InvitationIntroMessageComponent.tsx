@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-
-import * as animationData from "resource/ConfetiAnimation.json";
 import lottie from "lottie-web";
+import animationData from "resource/ConfetiAnimation.json";
 import confeti_img from "@photo/confetiImage.webp";
 import { contentResource } from "common/DataTypes";
 import ImageComponent from "component/ImageComponent";
@@ -18,7 +17,7 @@ const InvitationIntroMessageComponent: React.FC = () => {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        animationData: animationData.default,
+        animationData: animationData,
       });
     }
   }, []);
@@ -35,10 +34,11 @@ const InvitationIntroMessageComponent: React.FC = () => {
           <ImageComponent resources={imageResource} />
         </div>
         <div className={styles.lottieAnimationWrapper}>
-          <div ref={container} className={styles.lottieAnimation} />
+          <div className={styles.lottieAnimation} ref={container} />
         </div>
       </div>
     </div>
   );
 };
+
 export default InvitationIntroMessageComponent;

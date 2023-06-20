@@ -19,13 +19,13 @@ const InvitationPageComponent: React.FC = () => {
         className={styles.centerDivision}
         style={{ background: backgroundColor }}
       >
-        <input type="button" onClick={handlerBackButtonClick} value={"sss"} />
+        <input type="button" onClick={handlerBackButtonClick} value={"back"} />
         <input
           type="button"
           onClick={() => {
-            setBackgrountColor("white");
+            setBackgrountColor("black");
           }}
-          value={"sss"}
+          value={"dark mode"}
         />
         <div className={styles.contentWrapper}>
           <InvitationIntroMessageComponent />
