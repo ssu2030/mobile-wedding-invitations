@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ssu2030/mobile-wedding-invitations#readme",
   "dependencies": {
+    "lodash": "^4.17.21",
     "lottie-web": "^5.12.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

@@ -3,9 +3,12 @@ import { useLocation } from "react-router-dom";
 
 import LoadingComponent from "component/LoadingComponent";
 
-const LazyIntroPageComponent = React.lazy(() => import("page/IntroPageComponent"));
-const LazyDialogComponent = React.lazy(() => import("component/DialogComponent"));
-
+const LazyIntroPageComponent = React.lazy(
+  () => import("page/IntroPageComponent")
+);
+const LazyDialogComponent = React.lazy(
+  () => import("component/DialogComponent")
+);
 
 import styles from "style/MainPage.module.scss";
 
@@ -14,7 +17,7 @@ const MainPageComponent: React.FC = () => {
   const currentUrl = useLocation();
 
   useEffect(() => {
-    if (currentUrl.pathname !== "/invitation" ) {
+    if (currentUrl.pathname !== "/invitation") {
       const timeout = setTimeout(() => {
         setDialogOpen(true);
       }, 4000);
@@ -26,16 +29,16 @@ const MainPageComponent: React.FC = () => {
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.centerDivision}>
-        <Suspense fallback={<LoadingComponent/>} >  
+        <Suspense fallback={<LoadingComponent />}>
           <LazyIntroPageComponent />
           <LazyDialogComponent
             isOpen={dialogOpen}
             handleClose={() => {
               setDialogOpen(false);
             }}
-          /> 
-        </Suspense> 
-        </div>
+          />
+        </Suspense>
+      </div>
     </div>
   );
 };

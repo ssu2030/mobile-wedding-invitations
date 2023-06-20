@@ -1,36 +1,35 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+
 import styles from "style/contents/InvitationMessage.module.scss";
 
-const YourComponent: React.FC = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
+const InvitationMessageComponent: React.FC = () => {
+  const divRef = useRef(null);
   const handleScroll = () => {
-    const position = containerRef.current?.scrollTop || 0;
-    console.log("@@@@", position);
-    setScrollPosition(position);
+    console.log("@@@@@@ SCROLL");
   };
-
   useEffect(() => {
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll);
-      return () => container.removeEventListener("scroll", handleScroll);
+    if (divRef.current) {
+      console.log(divRef.current);
     }
   }, []);
-
   return (
-    <div className={styles.container} ref={containerRef}>
-      <div
-        className={styles.textWrapper}
-        style={{ transform: `translateY(-${scrollPosition}px)` }}
-      >
-        <span className={styles.text}>hi</span>
-        <span className={styles.text}>hello</span>
-        <span className={styles.text}>hihello</span>
+    <div ref={divRef} className={styles.messageWrapper} onScroll={handleScroll}>
+      <div className={styles.textWrapper}>
+        스물셋, 스물넷에 만나 <br />
+        예쁘게 연애한 지 8년, <br />
+        <br />
+      </div>
+      <div className={styles.textWrapper}>
+        돌이켜보면 자신에 대한 기억보다 <br />
+        서로에 대한 기억이 많은것 같습니다. <br />
+        <br />
+      </div>
+      <div className={styles.textWrapper}>
+        지금보다 더 많이 아끼고 배려하겠습니다. <br />
+        저희의 더 큰 사랑의 시작을 함께하는 날 <br />
+        축복과 격려 부탁드립니다. <br />
       </div>
     </div>
   );
 };
-
-export default YourComponent;
+export default InvitationMessageComponent;
