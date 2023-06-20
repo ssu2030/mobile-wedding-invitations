@@ -1,17 +1,37 @@
+.outWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .mainWrapper {
     position: relative;
+    background-color: white;
 }
 
 .imageWrapper {
     position: absolute;
+    padding: 10px 30px 30px 30px;
+    user-select: none;
+    background-color: white;
 }
 
 .lottieAnimationWrapper {
-    position: absolute;
     z-index: 9999;
+    background-color: white;
+    overflow: hidden;
+    max-height: 70%;
+}
+
+.lottieAnimation {
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
 }
 
 .headerMessageWrapper {
     background-color: white;
-    padding:10px;
+    padding-top:5%;
+    font-family: 'Reenie Beanie', serif;
+    font-size: 40px;
+    user-select: none;
 }

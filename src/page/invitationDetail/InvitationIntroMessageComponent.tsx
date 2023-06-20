@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 import * as animationData from "resource/ConfetiAnimation.json";
 import lottie from "lottie-web";
@@ -28,17 +28,17 @@ const InvitationIntroMessageComponent: React.FC = () => {
   ];
 
   return (
-    <>
-      <div className={styles.headerMessageWrapper}>{"Happy Wedding"}</div>
+    <div className={styles.outWrapper}>
+      <div className={styles.headerMessageWrapper}>{"Wedding Invitation"}</div>
       <div className={styles.mainWrapper}>
         <div className={styles.imageWrapper}>
           <ImageComponent resources={imageResource} />
         </div>
         <div className={styles.lottieAnimationWrapper}>
-          <div ref={container} style={{ width: "430px", height: "600px" }} />
+          <div ref={container} className={styles.lottieAnimation} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default InvitationIntroMessageComponent;
