@@ -1,14 +1,11 @@
 import React from "react";
 
-import profileVideoWebm from "@video/profileVideoWEBM.webm";
-import profileVideoMp4 from "@video/profileVideoMP4.mp4";
-import { contentResource } from "common/DataTypes";
-import VideoComponent from "component/VideoComponent";
-
 import backButton from "@photo/backButton.webp";
+import profileImage from "@photo/profile.webp";
 
 import styles from "style/contents/InvitationGalleryProfile.module.scss";
 import { useNavigate } from "react-router-dom";
+import ImageComponent from "component/ImageComponent";
 
 const InvitationGalleryProfileComponent: React.FC = () => {
   const navigate = useNavigate();
@@ -16,12 +13,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
     navigate("/");
   };
 
-  const profileVideoResource: contentResource[] = [
-    {
-      resourcePath: profileVideoWebm,
-      type: "video/webm",
-    }
-  ];
+  
   return (
     <div style={{ backgroundColor: "white" }}>
       <div className={styles.profile}>
@@ -36,11 +28,10 @@ const InvitationGalleryProfileComponent: React.FC = () => {
         </div>
         <div className={styles.profileTop}>
           <div className={styles.profileImage}>
-            <VideoComponent
-              resources={profileVideoResource}
-              width={"100"}
-              height={"100"}
-              isCircle={true}
+            <img
+              src={profileImage}
+              alt={""}
+              style={{width:"100px", height:"100px", borderRadius: "50%"}}
             />
           </div>
           <div className={styles.profileStats}>
