@@ -7,6 +7,9 @@ export type contentResource = {
 
 export interface VideoComponentProps {
     resources: contentResource[];
+    width?: string;
+    height?: string;
+    isCircle?: boolean;
 }
 
 export type ImageTypes = "image/jpeg" | "image/avif" | "image/webp" | undefined;

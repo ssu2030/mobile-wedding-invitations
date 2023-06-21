@@ -39,6 +39,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'SF UI Display';
+    src: url('../resource/font/subset-SFUIDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 .mainWrapper {
     width: 100%;
     height: 100%;
