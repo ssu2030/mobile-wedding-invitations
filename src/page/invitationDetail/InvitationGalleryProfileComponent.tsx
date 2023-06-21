@@ -5,7 +5,6 @@ import profileImage from "@photo/profile.webp";
 
 import styles from "style/contents/InvitationGalleryProfile.module.scss";
 import { useNavigate } from "react-router-dom";
-import ImageComponent from "component/ImageComponent";
 
 const InvitationGalleryProfileComponent: React.FC = () => {
   const navigate = useNavigate();
