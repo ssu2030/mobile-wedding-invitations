@@ -95,6 +95,7 @@ const GalleryRow: React.FC<{ images: photo[] }> = ({ images }) => {
             position: "relative",
             overflow: "hidden",
           }}
+          key={`Gallery Image ${index}`}
           onClick={() => {
             setPictureResource(image.src);
             setDialogOpen(true);

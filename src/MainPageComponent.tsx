@@ -20,7 +20,7 @@ const MainPageComponent: React.FC = () => {
     if (currentUrl.pathname !== "/invitation") {
       const timeout = setTimeout(() => {
         setDialogOpen(true);
-      }, 4000);
+      }, 2000);
 
       return () => clearTimeout(timeout);
     }
