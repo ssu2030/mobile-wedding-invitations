@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import InvitationGalleryItemDetailComponent from "./InvitationGalleryItemDetailComponent";
 
 import image1 from "@photo/gallery/galleryImage01.webp";
 import image2 from "@photo/gallery/galleryImage02.webp";
@@ -18,6 +20,7 @@ import image15 from "@photo/gallery/galleryImage15.webp";
 
 interface photo {
   src: string;
+  // 추후 thumbnail에 관한 데이터 리소스 경로까지 받을것
 }
 
 const photos: photo[] = [
@@ -67,40 +70,60 @@ const photos: photo[] = [
     src: image15,
   },
 ];
-const GalleryRow: React.FC<{ images: photo[] }> = ({ images }) => (
-  <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-    }}
-  >
-    {images.map((image, index) => (
-      <div
-        style={{
-          flexBasis: "33.3333%",
-          height: "0",
-          paddingBottom: "30%",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={image.src}
+const GalleryRow: React.FC<{ images: photo[] }> = ({ images }) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [pictureResource, setPictureResource] = useState("");
+
+  const handleClose = () => {
+    setDialogOpen(false);
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+      }}
+    >
+      {images.map((image, index) => (
+        <div
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            flexBasis: "33.3333%",
+            height: "0",
+            paddingBottom: "30%",
+            position: "relative",
+            overflow: "hidden",
           }}
-          alt={`Gallery Image ${index}`}
-        />
-      </div>
-    ))}
-  </div>
-);
+          onClick={() => {
+            setPictureResource(image.src);
+            setDialogOpen(true);
+          }}
+        >
+          <img
+            src={image.src}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+            key={`Gallery Image ${index}`}
+            alt={`Gallery Image ${index}`}
+          />
+        </div>
+      ))}
+
+      <InvitationGalleryItemDetailComponent
+        resource={pictureResource}
+        isOpen={dialogOpen}
+        handleClose={handleClose}
+      />
+    </div>
+  );
+};
 
 const InvitationGalleryComponent: React.FC = () => {
   return (

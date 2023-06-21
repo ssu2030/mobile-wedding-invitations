@@ -1,0 +1,59 @@
+
+  .dialogWrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+  
+  
+  .dialogContentWrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 440px;
+    max-height: 800px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .dialogContentTextContent {
+    font-family: 'MapoGoldenPier', serif;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .dialogContentCheckBoxContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .checkboxStyles {
+    width: 20px;
+  }
+  
+  .labelStyle {
+    font-family: 'MapoGoldenPier', serif;
+    font-size: 12px;
+    align-items: center;
+    display: flex;
+    width: 80px;
+  }
+  
