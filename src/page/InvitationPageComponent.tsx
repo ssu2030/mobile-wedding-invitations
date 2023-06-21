@@ -5,6 +5,7 @@ import InvitationMessageComponent from "./invitationDetail/InvitationMessageComp
 import InvitationIntroMessageComponent from "./invitationDetail/InvitationIntroMessageComponent";
 import InvitationGalleryComponent from "./invitationDetail/InvitationGalleryComponent";
 import InvitationGalleryProfileComponent from "./invitationDetail/InvitationGalleryProfileComponent";
+import InvitationMapComponent from './invitationDetail/InvitationMapComponent';
 
 const InvitationPageComponent: React.FC = () => {
   const [backgroundColor, setBackgrountColor] = useState("black");
@@ -24,6 +25,7 @@ const InvitationPageComponent: React.FC = () => {
           <InvitationMessageComponent />
           <InvitationGalleryProfileComponent />
           <InvitationGalleryComponent />
+          <InvitationMapComponent/>
         </div>
       </div>
     </div>
