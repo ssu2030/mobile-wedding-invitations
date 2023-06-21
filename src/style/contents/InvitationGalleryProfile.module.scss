@@ -1,7 +1,4 @@
 .profile {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
     width: 100%; 
     max-width: 420px;
     display: flex;
@@ -18,7 +15,9 @@
 .idWrapper {
     width: 75%;
     text-align: center;
-    font-family: 'SF UI Display';
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
 }
 
@@ -80,7 +79,7 @@
 }
 
 .profileTextArea {
-    width: 100%;
+    width: 90%;
     text-align: left;
     padding: 5%;
     font-family: 'SF UI Display';   
@@ -96,9 +95,9 @@
     border: 1px none;
     border-radius: 10px;
     font-family: 'SF UI Display';
-    width: 48%;
+    width: 47%;
+    margin-left: 2%;
     font-size: 12px;
-    margin-right: 2%;
     height: 24px;
     user-select: none;
 }
