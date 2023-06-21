@@ -20,11 +20,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
     {
       resourcePath: profileVideoWebm,
       type: "video/webm",
-    },
-    {
-      resourcePath: profileVideoMp4,
-      type: "video/mp4",
-    },
+    }
   ];
   return (
     <div style={{ backgroundColor: "white" }}>

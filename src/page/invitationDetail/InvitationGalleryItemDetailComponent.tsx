@@ -25,12 +25,17 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
                 top: 0,
                 left: 0,
                 width: "100%",
-                height: "100%",
+                height: "90%",
+                marginBottom: "5%",
                 objectFit: "cover",
+                borderRadius: "5px",
               }}
               alt={`Gallery Image ${resource}`}
               onClick={handleClose}
             />
+            
+          <div className={styles.photoBottom}>
+              hello </div>
           </div>
         </div>
       )}
