@@ -33,3 +33,23 @@
 .mapGoButtonStyle {
     margin: 10px;
 }
+
+.mapDetailInfomationDescription {
+    display: flex;
+    flex-direction: column;
+}
+
+.mapDetailInfomationDescriptionItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.mapDetailInfomationDescriptionItemSubject {
+    font-size: 12px;
+    text-align: left;
+}
+
+.mapDetailInfomationDescriptionItemSubject {
+    font-size: 10px;
+    text-align: left;
+}

@@ -45,9 +45,11 @@ const InvitationMapComponent: React.FC = () => {
   const handleCopyButtonClick = async () => {
     try {
       await navigator.clipboard.writeText(NamsanAddr);
-      console.log("텍스트가 클립보드에 복사되었습니다.");
+      window.alert("클립보드에 복사되었습니다.");
     } catch (err) {
-      console.error("텍스트 복사 중에 오류가 발생했습니다:", err);
+      window.alert(
+        `텍스트 복사 중에 오류가 발생했습니다. \n [ERROR LOG]: ${err}`
+      );
     }
   };
 
@@ -62,7 +64,6 @@ const InvitationMapComponent: React.FC = () => {
       >
         {"오는길 보기"}
       </button>
-      <button onClick={openKakaoMapApp}> 카카오지도 열기 </button>
       <ImageComponent resources={contentResource} />
       <ImageComponent resources={contentResource2} />
       <div className={styles.detailInformationWrapper}>
@@ -82,7 +83,81 @@ const InvitationMapComponent: React.FC = () => {
             {"카카오지도 열기"}
           </button>
         </div>
-        <div></div>
+        <div className={styles.mapDetailInfomationDescription}>
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {"지하철 이용시"}
+            </div>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {
+                "6호선 한강진역: 1번출구 반대방향 - 도보 7분거리 1번 출구 - 예식 1시간전 셔틀버스 운행(10~15분 간격)"
+              }
+            </div>
+          </div>
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              버스 이용시{" "}
+            </div>
+
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              장충단길 입구 하차 - 간선 402, 405 (광화문-장지동 방향), 142, 420,
+              407 <br />
+              남산예술원 하차 - 402, 405 (장지동-광화문 방향) 한강진역 하차 -
+              간선 110, 405 <br />
+              서울시 중부기술 교육원, 블루스퀘어 하차 - 간선 142-144, 402, 407 /
+              지선 6211
+            </div>
+          </div>
+
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              자가용 이용시
+            </div>
+
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              경부고속도로-한남대교에서 오실 경우
+              경부고속도로-한남대교-한남5거리(직진,우측차선)-북한남
+              삼거리(우회전) -다산로에서 U턴 -소월길(하얏트 방향)-남산맨션 바로
+              옆 남산예술원 웨딩홀
+            </div>
+          </div>
+
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              주차안내: 약 180대 주차 가능
+            </div>
+          </div>
+
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              현금인출기 없음 안내
+            </div>
+
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              남산 공원에 위치한 야외 웨딩홀로 현금인출기가 따로 없습니다
+            </div>
+          </div>
+
+          <div className={styles.mapDetailInfomationDescriptionItem}>
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              화환 반입 불가 안내
+            </div>
+
+            <div className={styles.mapDetailInfomationDescriptionItemSubject}>
+              {" "}
+              바른 결혼 문화 캠페인에 동참하고 있는 착한 웨딩홀로 화환 반입이
+              금지되어있음
+            </div>
+          </div>
+
+          <div className=""></div>
+        </div>
       </div>
     </div>
   );
