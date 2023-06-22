@@ -7,7 +7,7 @@
 
 .idSection {
     width: 100%;
-    height: 30px;
+    height: 4vh;
     display: flex;
     flex-direction: row;
 }
@@ -18,11 +18,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 .backButton {
-    width: 15%;
+    width: 15vw;
 }
 
 .profileTop {
@@ -33,21 +33,21 @@
   
 .profileImage {
     float: left;
-    width: 25%;
-    height: 25%;
+    width: 25vw;
+    height: 25vw;
     
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px none;
     border-radius: 50%;
-        margin-left: 5%;
+    margin-left: 5vw;
 }
 
 
 
 .profileStats {
-    width: 70%;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,18 +58,18 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 30%
+    width: 30%;
 }
 
 .profileStatsItemNumber {
     font-family: 'SF UI Display';
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .profileStatsItemValue {
     font-family: 'SF UI Display';
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .profileBottom {
@@ -81,7 +81,7 @@
 .profileTextArea {
     width: 90%;
     text-align: left;
-    padding: 5%;
+    padding: 5vw;
     font-family: 'SF UI Display';   
     user-select: none;
 }
@@ -97,7 +97,7 @@
     font-family: 'SF UI Display';
     width: 47%;
     margin-left: 2%;
-    font-size: 12px;
+    font-size: 0.8rem;
     height: 24px;
     user-select: none;
 }

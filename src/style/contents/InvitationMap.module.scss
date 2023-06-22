@@ -9,7 +9,7 @@
 }
 
 .titleWrapper {
-    font-size: 42px;
+    font-size: 3rem;
 }
 
 .detailInformationWrapper {
@@ -27,7 +27,7 @@
 }
 .detailInformationPhoneICONSection
 {
-    width: 24px;
+    width: 1.5rem;
     height: 24px;
 }
 .detailInformationPhoneNumberSection {
@@ -45,8 +45,9 @@
     display: flex;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
     justify-content: center;
-    width: 20%;
-    font-size: 22px;
+    width: 15vw;
+    height: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
 
     &:hover {
@@ -84,7 +85,7 @@
 }
 
 .mapDetailInfomationDescriptionItemSubject {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
     text-align: left;
     padding-top: 4px;

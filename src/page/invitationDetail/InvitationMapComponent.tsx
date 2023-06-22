@@ -162,7 +162,7 @@ const InvitationMapComponent: React.FC = () => {
         </div>
         <div className={styles.mapDetailInfomationDescription}>
           <AccordionComponent
-            title="남산 예술원 안내 사항 보기"
+            title="> 남산 예술원 안내 사항 보기"
             children={AccodionItemComponent}
           />
           <div className=""></div>

@@ -34,8 +34,7 @@ const NaverMapComponent: React.FC = () => {
       ref={mapElement}
       style={{
         position: "relative",
-        minHeight: "400px",
-        height: "600px",
+        height: "40vh",
         width: "100%",
       }}
     ></div>

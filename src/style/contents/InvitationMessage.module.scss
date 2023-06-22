@@ -1,28 +1,21 @@
 .messageWrapper {
     text-align: left;
-    
     background-color: white;
     color: black;
     font-family: 'Nanum SeongSirCe', serif;
-    font-size: 24px;
-    
-    @media screen and (max-width: 400px) {
-        font-size: 24px * 0.9;
-    }
-
-    @media screen and (max-width: 300px) {
-        font-size: 24px * 0.7;
-    }
-    max-height: 220px;
+    font-size: 1.5rem;
+    height: 30vh;
+    min-height: 30vh;
+    max-height: 30vh;
     overflow: auto;
-
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     user-select: none;
 }
 
 .textWrapper {
+    padding-top: 10vh;
     text-align: center;
-    height: 220px;
-    min-height: 220px;
-    max-height: 220px;
+    height: 20vh;
+    min-height: 20vh;
+    max-height: 20vh;
 }

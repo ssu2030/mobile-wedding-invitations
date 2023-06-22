@@ -49,10 +49,10 @@ const InvitationGalleryProfileComponent: React.FC = () => {
         </div>
         <div className={styles.profileBottom}>
           <div className={styles.profileTextArea}>
-            <div style={{ fontWeight: "bold", fontSize: "16px" }}>
+            <div style={{ fontWeight: "bold", fontSize: "1rem" }}>
               세미와 동호 <br />
             </div>
-            <div style={{ fontSize: "14px" }}>WEDDING GALLERY 📷</div>
+            <div style={{ fontSize: "0.8rem" }}>WEDDING GALLERY 📷</div>
           </div>
           <div className={styles.profileButtonArea}>
             <button className={styles.followButtonStyle}>팔로우 +</button>
