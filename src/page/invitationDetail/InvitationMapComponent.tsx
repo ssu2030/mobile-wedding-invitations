@@ -18,6 +18,88 @@ import copyIcon from "@photo/icon/copyIcon.webp";
 import styles from "style/contents/InvitationMap.module.scss";
 import AccordionComponent from "component/AccordionComponent";
 
+const AccodionItemComponent: React.JSX.Element = (
+  <>
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"지하철 이용시"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            6호선 한강진역: 1번출구 반대방향 - 도보 7분거리 <br />
+            1번 출구 - 예식 1시간전 셔틀버스 운행(10~15분 간격)
+          </div>
+        }
+      />
+    </div>
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"버스 이용시"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            장충단길 입구 하차 - 간선 402, 405 (광화문-장지동 방향), 142, 420,
+            407 <br />
+            남산예술원 하차 - 402, 405 (장지동-광화문 방향) 한강진역 하차 - 간선
+            110, 405 <br />
+            서울시 중부기술 교육원, 블루스퀘어 하차 - 간선 142-144, 402, 407 /
+            지선 6211
+            <br />
+          </div>
+        }
+      />
+    </div>
+
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"자가용 이용시"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            경부고속도로-한남대교에서 오실 경우
+            <br />
+            경부고속도로-한남대교-한남5거리(직진,우측차선)-북한남
+            <br />
+            삼거리(우회전) -다산로에서 U턴 -소월길(하얏트 방향)-남산맨션 바로 옆
+            남산예술원 웨딩홀 <br />
+          </div>
+        }
+      />
+    </div>
+
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"주차안내"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            약 180대 주차 가능
+          </div>
+        }
+      />
+    </div>
+
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"현금인출기 없음 안내"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            남산 공원에 위치한 야외 웨딩홀로 현금인출기가 따로 없습니다
+          </div>
+        }
+      />
+    </div>
+
+    <div className={styles.mapDetailInfomationDescriptionItem}>
+      <AccordionComponent
+        title={"화환 반입 불가 안내"}
+        children={
+          <div className={styles.mapDetailInfomationDescriptionItemExplain}>
+            바른 결혼 문화 캠페인에 동참하고 있는 착한 웨딩홀로 화환 반입이
+            금지되어있음
+          </div>
+        }
+      />
+    </div>
+  </>
+);
+
 const InvitationMapComponent: React.FC = () => {
   const contentResource2: contentResource[] = [
     {
@@ -56,13 +138,6 @@ const InvitationMapComponent: React.FC = () => {
     <div className={styles.mapWrapper}>
       <div className={styles.titleWrapper}> * 오시는 길 * </div>
 
-      <button
-        onClick={() => {
-          window.open("https://namsanartweddinghall.com/blogPost/location");
-        }}
-      >
-        {"오는길 보기"}
-      </button>
       <ImageComponent resources={contentResource2} />
       <div className={styles.detailInformationWrapper}>
         <div className={styles.detailInformationPhone}>
@@ -96,98 +171,16 @@ const InvitationMapComponent: React.FC = () => {
           </button>
         </div>
         <div className={styles.mapDetailInfomationDescription}>
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"지하철 이용시"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  6호선 한강진역: 1번출구 반대방향 - 도보 7분거리 <br />
-                  1번 출구 - 예식 1시간전 셔틀버스 운행(10~15분 간격)
-                </div>
-              }
-            />
-          </div>
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"버스 이용시"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  장충단길 입구 하차 - 간선 402, 405 (광화문-장지동 방향), 142,
-                  420, 407 <br />
-                  남산예술원 하차 - 402, 405 (장지동-광화문 방향) 한강진역 하차
-                  - 간선 110, 405 <br />
-                  서울시 중부기술 교육원, 블루스퀘어 하차 - 간선 142-144, 402,
-                  407 / 지선 6211
-                  <br />
-                </div>
-              }
-            />
-          </div>
-
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"자가용 이용시"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  경부고속도로-한남대교에서 오실 경우
-                  <br />
-                  경부고속도로-한남대교-한남5거리(직진,우측차선)-북한남
-                  <br />
-                  삼거리(우회전) -다산로에서 U턴 -소월길(하얏트 방향)-남산맨션
-                  바로 옆 남산예술원 웨딩홀 <br />
-                </div>
-              }
-            />
-          </div>
-
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"주차안내"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  약 180대 주차 가능
-                </div>
-              }
-            />
-          </div>
-
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"현금인출기 없음 안내"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  남산 공원에 위치한 야외 웨딩홀로 현금인출기가 따로 없습니다
-                </div>
-              }
-            />
-          </div>
-
-          <div className={styles.mapDetailInfomationDescriptionItem}>
-            <AccordionComponent
-              title={"화환 반입 불가 안내"}
-              children={
-                <div
-                  className={styles.mapDetailInfomationDescriptionItemExplain}
-                >
-                  바른 결혼 문화 캠페인에 동참하고 있는 착한 웨딩홀로 화환
-                  반입이 금지되어있음
-                </div>
-              }
-            />
-          </div>
-
+          <AccordionComponent title="보기" children={AccodionItemComponent} />
           <div className=""></div>
         </div>
+        <button
+          onClick={() => {
+            window.open("https://namsanartweddinghall.com/blogPost/location");
+          }}
+        >
+          {"오는길 보기"}
+        </button>
       </div>
     </div>
   );
