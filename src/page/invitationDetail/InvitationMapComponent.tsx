@@ -10,13 +10,11 @@ import {
 } from "common/WeddingInformation";
 
 import hanMapImage from "@photo/handMap.webp";
-import kakaoMapIcon from "@photo/icon/kakao_map.webp";
-import naverMapIcon from "@photo/icon/naverMap.webp";
-import callIcon from "@photo/icon/callIcon.webp";
-import copyIcon from "@photo/icon/copyIcon.webp";
+
+import AccordionComponent from "component/AccordionComponent";
+import NaverMapComponent from "./NaverMapComponent";
 
 import styles from "style/contents/InvitationMap.module.scss";
-import AccordionComponent from "component/AccordionComponent";
 
 const AccodionItemComponent: React.JSX.Element = (
   <>
@@ -136,7 +134,7 @@ const InvitationMapComponent: React.FC = () => {
 
   return (
     <div className={styles.mapWrapper}>
-      <div className={styles.titleWrapper}> * 오시는 길 * </div>
+      <div className={styles.titleWrapper}> {"* 오시는 길 *"} </div>
 
       <ImageComponent resources={contentResource2} />
       <div className={styles.detailInformationWrapper}>
@@ -144,36 +142,51 @@ const InvitationMapComponent: React.FC = () => {
           <div
             className={styles.detailInformationPhoneNumberSection}
           >{`남산예술원 웨딩홀 TEL ${NamsanPhoneNumber}`}</div>
-          <img
-            className={styles.detailInformationPhoneICONSection}
-            src={callIcon}
-            alt={""}
+          <button
+            className={styles.detailInformationPhoneButton}
             onClick={handleCallButtonClick}
-          />
+          >
+            {"전화하기"}
+          </button>
         </div>
         <div className={styles.detailInformationMap}>
           <div className={styles.detailInformationPhoneNumberSection}>
             {NamsanAddr}
           </div>
-          <img
-            className={styles.detailInformationPhoneICONSection}
-            src={copyIcon}
-            alt={""}
+          <button
+            className={styles.detailInformationPhoneButton}
             onClick={handleCopyButtonClick}
-          />
-        </div>
-        <div className={styles.detailInformationMapWithMapDetail}>
-          <button className={styles.mapGoButtonStyle} onClick={openNaverMapApp}>
-            {"네이버지도 열기"}
-          </button>
-          <button className={styles.mapGoButtonStyle} onClick={openKakaoMapApp}>
-            {"카카오지도 열기"}
+          >
+            {"복사하기"}
           </button>
         </div>
         <div className={styles.mapDetailInfomationDescription}>
-          <AccordionComponent title="보기" children={AccodionItemComponent} />
+          <AccordionComponent
+            title="남산 예술원 안내 사항 보기"
+            children={AccodionItemComponent}
+          />
           <div className=""></div>
         </div>
+        <NaverMapComponent />
+        <div className={styles.detailInformationMapWithMapDetail}>
+          <div className={styles.mapIconWrapper}>
+            <button
+              className={styles.mapGoButtonStyle}
+              onClick={openNaverMapApp}
+            >
+              {"네이버지도 열기"}
+            </button>
+          </div>
+          <div className={styles.mapIconWrapper}>
+            <button
+              className={styles.mapGoButtonStyle}
+              onClick={openKakaoMapApp}
+            >
+              {"카카오지도 열기"}
+            </button>
+          </div>
+        </div>
+
         <button
           onClick={() => {
             window.open("https://namsanartweddinghall.com/blogPost/location");

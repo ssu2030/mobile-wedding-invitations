@@ -12,7 +12,6 @@ const InvitationGalleryProfileComponent: React.FC = () => {
     navigate("/");
   };
 
-  
   return (
     <div style={{ backgroundColor: "white" }}>
       <div className={styles.profile}>
@@ -23,14 +22,14 @@ const InvitationGalleryProfileComponent: React.FC = () => {
             style={{ width: "24px", height: "24px", marginRight: "10%" }}
             onClick={handlerBackButtonClick}
           />
-          <div className={styles.idWrapper}> {"howls.movings.castles"}</div>
+          <div className={styles.idWrapper}> {"semi.and.dongho"}</div>
         </div>
         <div className={styles.profileTop}>
           <div className={styles.profileImage}>
             <img
               src={profileImage}
               alt={""}
-              style={{width:"100px", height:"100px", borderRadius: "50%"}}
+              style={{ width: "100px", height: "100px", borderRadius: "50%" }}
             />
           </div>
           <div className={styles.profileStats}>
@@ -53,7 +52,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
             <div style={{ fontWeight: "bold", fontSize: "16px" }}>
               세미와 동호 <br />
             </div>
-            <div style={{ fontSize: "14px" }}>Wedding Gallery 📷</div>
+            <div style={{ fontSize: "14px" }}>WEDDING GALLERY 📷</div>
           </div>
           <div className={styles.profileButtonArea}>
             <button className={styles.followButtonStyle}>팔로우 +</button>

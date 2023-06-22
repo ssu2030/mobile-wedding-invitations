@@ -1,11 +1,10 @@
 .accordion {
-    border: 1px none #ddd;
+    border: 1px none;
     border-radius: 4px;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
     
   
     &__header {
-      cursor: pointer;
       background-color: #FFFFFF;
   
       &:hover {

@@ -1,5 +1,3 @@
-
-
 export const NamsanPhoneNumber: string = "02-795-2244";
 
 export const NamsanLatitude = 37.543667096265;
