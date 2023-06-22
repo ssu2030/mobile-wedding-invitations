@@ -4,5 +4,32 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    
+}
+
+.detailInformationWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+}
+
+.detailInformationPhone {
+    display: flex;
+    flex-direction: row;
+}
+
+.detailInformationMap {
+    display: flex;
+    flex-direction: row;
+}
+
+.detailInformationMapWithMapDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mapGoButtonStyle {
+    margin: 10px;
 }
