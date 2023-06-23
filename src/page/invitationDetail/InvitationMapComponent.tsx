@@ -171,7 +171,7 @@ const InvitationMapComponent: React.FC = () => {
           <AccordionComponent
             title="> 지도 자세히 보기"
             children={
-              <>
+              <div className={styles.mapDetailWrapper}>
                 <NaverMapComponent />
                 <div className={styles.detailInformationMapWithMapDetail}>
                   <div className={styles.mapIconWrapper}>
@@ -189,18 +189,19 @@ const InvitationMapComponent: React.FC = () => {
                     >
                       {"카카오지도 열기"}
                     </button>
-                    <button
-                      onClick={() => {
-                        window.open(
-                          "https://namsanartweddinghall.com/blogPost/location"
-                        );
-                      }}
-                    >
-                      {"오는길 보기"}
-                    </button>
                   </div>
                 </div>
-              </>
+                <button
+                  className={styles.mapWayButtonStyle}
+                  onClick={() => {
+                    window.open(
+                      "https://namsanartweddinghall.com/blogPost/location"
+                    );
+                  }}
+                >
+                  {"오는길 보기"}
+                </button>
+              </div>
             }
           />
           <div className=""></div>

@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 const IntroPageComponent: React.FC = () => {
   const navigate = useNavigate();
   const container = useRef(null);
-  const pictureContainer = useRef<HTMLPictureElement>();
 
   const handleClick = () => {
     navigate("/invitation");
