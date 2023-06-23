@@ -26,12 +26,15 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.13.0",
     "react-router-dom": "^6.13.0",
-    "save": "^2.9.0"
+    "react-slick": "^0.29.0",
+    "save": "^2.9.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/navermaps": "^3.6.4",
     "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.4",
+    "@types/react-slick": "^0.23.10",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",

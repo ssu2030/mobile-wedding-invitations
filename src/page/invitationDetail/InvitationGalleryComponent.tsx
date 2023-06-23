@@ -5,7 +5,7 @@ import { photoTypes, weddingPhotos } from "common/Data";
 
 const GalleryRow: React.FC<{ images: photoTypes[] }> = ({ images }) => {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [pictureResource, setPictureResource] = useState("");
+  const [pictureResource, setPictureResource] = useState<photoTypes>();
 
   const handleClose = () => {
     setDialogOpen(false);
@@ -30,7 +30,7 @@ const GalleryRow: React.FC<{ images: photoTypes[] }> = ({ images }) => {
           }}
           key={`Gallery Image ${index}`}
           onClick={() => {
-            setPictureResource(image.src);
+            setPictureResource(image);
             setDialogOpen(true);
           }}
         >
