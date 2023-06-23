@@ -1,7 +1,6 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import { photoTypes, weddingPhotos } from "common/Data";
 
 import styles from "style/contents/InvitationGalleryItemDetail.module.scss";
@@ -17,33 +16,31 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
   isOpen,
   handleClose,
 }: IProps) => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: resource === undefined ? 0 : resource.index - 1,
-  };
-
   const images = weddingPhotos.map((value: photoTypes, index: number) => {
-    return (
-      <img
-        src={value.src}
-        className={styles.photoStyle}
-        alt={`Gallery Image ${value.src}`}
-        onClick={handleClose}
-        key={`photoNumber-${index}`}
-      />
-    );
+    return {
+      original: value.src,
+      thumbnail: value.src,
+      originalAlt: `Gallery Image ${value.src}`,
+    };
   });
+
+  const startIndex = resource
+    ? weddingPhotos.findIndex((photo) => photo.index === resource.index)
+    : 0;
 
   return (
     <div>
       {isOpen && (
         <div className={styles.dialogWrapper}>
           <div className={styles.dialogContentWrapper}>
-            <Slider {...settings}>{images}</Slider>
+            <ImageGallery
+              items={images}
+              startIndex={startIndex}
+              showPlayButton={false}
+              showFullscreenButton={true}
+              disableSwipe={false}
+              onClick={handleClose}
+            />
           </div>
         </div>
       )}
