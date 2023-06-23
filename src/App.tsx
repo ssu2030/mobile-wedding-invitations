@@ -1,7 +1,5 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MainPageComponent from "MainPageComponent";
-import InvitationPageComponent from "page/InvitationPageComponent";
 
 import LoadingComponent from "component/LoadingComponent";
 
@@ -11,6 +9,9 @@ const LazyInvitaionComponent = React.lazy(
 );
 
 const App = () => {
+  useEffect(() => {
+    import("page/InvitationPageComponent");
+  }, []);
   return (
     <Router>
       <Routes>
