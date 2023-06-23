@@ -33,9 +33,8 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
               alt={`Gallery Image ${resource}`}
               onClick={handleClose}
             />
-            
-          <div className={styles.photoBottom}>
-              hello </div>
+
+            <div className={styles.photoBottom}>hello </div>
           </div>
         </div>
       )}
