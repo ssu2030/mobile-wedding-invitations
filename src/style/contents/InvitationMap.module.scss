@@ -10,6 +10,7 @@
 
 .titleWrapper {
     font-size: 3rem;
+    padding-bottom: 3vh;
 }
 
 .detailInformationWrapper {
@@ -24,6 +25,7 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: center;
 }
 .detailInformationPhoneICONSection
 {
@@ -31,21 +33,21 @@
     height: 24px;
 }
 .detailInformationPhoneNumberSection {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: left;
-    font-size: 24px;
+    font-size: 1.4rem;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
 }
 
 .detailInformationPhoneButton {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: white;
     display: flex;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
     justify-content: center;
-    width: 15vw;
+    width: 30%;
     height: 1.8rem;
     font-size: 1rem;
     font-weight: bold;
@@ -54,12 +56,6 @@
         background-color: #e0e0e0;
     }
 }
-
-.detailInformationMap {
-    display: flex;
-    flex-direction: row;
-}
-
 .detailInformationMapWithMapDetail {
     display: flex;
     flex-direction: row;
@@ -69,7 +65,22 @@
 }
 
 .mapGoButtonStyle {
-    margin: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    font-family: 'Nanum DdoBagDdoBag',sans-serif;
+    justify-content: center;
+    width: 40vw;
+    height: 2.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+
 }
 
 

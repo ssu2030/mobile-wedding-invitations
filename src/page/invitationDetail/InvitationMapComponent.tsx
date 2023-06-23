@@ -149,7 +149,7 @@ const InvitationMapComponent: React.FC = () => {
             {"전화하기"}
           </button>
         </div>
-        <div className={styles.detailInformationMap}>
+        <div className={styles.detailInformationPhone}>
           <div className={styles.detailInformationPhoneNumberSection}>
             {NamsanAddr}
           </div>
@@ -167,33 +167,44 @@ const InvitationMapComponent: React.FC = () => {
           />
           <div className=""></div>
         </div>
-        <NaverMapComponent />
-        <div className={styles.detailInformationMapWithMapDetail}>
-          <div className={styles.mapIconWrapper}>
-            <button
-              className={styles.mapGoButtonStyle}
-              onClick={openNaverMapApp}
-            >
-              {"네이버지도 열기"}
-            </button>
-          </div>
-          <div className={styles.mapIconWrapper}>
-            <button
-              className={styles.mapGoButtonStyle}
-              onClick={openKakaoMapApp}
-            >
-              {"카카오지도 열기"}
-            </button>
-          </div>
+        <div className={styles.mapDetailInfomationDescription}>
+          <AccordionComponent
+            title="> 지도 자세히 보기"
+            children={
+              <>
+                <NaverMapComponent />
+                <div className={styles.detailInformationMapWithMapDetail}>
+                  <div className={styles.mapIconWrapper}>
+                    <button
+                      className={styles.mapGoButtonStyle}
+                      onClick={openNaverMapApp}
+                    >
+                      {"네이버지도 열기"}
+                    </button>
+                  </div>
+                  <div className={styles.mapIconWrapper}>
+                    <button
+                      className={styles.mapGoButtonStyle}
+                      onClick={openKakaoMapApp}
+                    >
+                      {"카카오지도 열기"}
+                    </button>
+                    <button
+                      onClick={() => {
+                        window.open(
+                          "https://namsanartweddinghall.com/blogPost/location"
+                        );
+                      }}
+                    >
+                      {"오는길 보기"}
+                    </button>
+                  </div>
+                </div>
+              </>
+            }
+          />
+          <div className=""></div>
         </div>
-
-        <button
-          onClick={() => {
-            window.open("https://namsanartweddinghall.com/blogPost/location");
-          }}
-        >
-          {"오는길 보기"}
-        </button>
       </div>
     </div>
   );

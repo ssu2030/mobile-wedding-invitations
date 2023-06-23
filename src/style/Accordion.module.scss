@@ -19,14 +19,14 @@
       }
     
     &__body.openBody {
-        max-height: 80vh;
+        max-height: 100vh;
     }
   
     &.open {
       .accordion__body {
         padding-left: 5vw;
         padding-bottom: 2vh;
-        max-height: 80vh; // 이 값을 조절하여 보여지는 내용에 맞게 설정
+        max-height: 100vh; // 이 값을 조절하여 보여지는 내용에 맞게 설정
       }
     }
   }

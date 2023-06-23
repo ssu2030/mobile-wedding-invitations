@@ -19,17 +19,18 @@
 .lottieAnimationWrapper {
     z-index: 9999;
     background-color: white;
-    overflow: hidden;
-    max-height: 70%;
+    
+    max-height: 70vh;
 }
 
 .lottieAnimation {
-    overflow: hidden;
     width: 100%;
-    max-height: 700px;
-
+    height: 70vh;
     background-color: white;
-}
+    /* 추가된 스타일 */
+    
+    
+  }
 
 .headerMessageWrapper {
     background-color: white;
