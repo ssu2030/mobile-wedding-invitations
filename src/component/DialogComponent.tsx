@@ -11,9 +11,13 @@ const DialogComponent: React.FC<DialogProps> = ({  isOpen, handleClose }) => {
     const navigate = useNavigate();
     
     const handleClick = () => {
-        navigate("/invitation");
-      };
+      handleClose();  
+      navigate("/invitation");
+    };
 
+  const handleSorryClick = () => {
+    window.location.reload();
+  }
   return (
     <div>
       {isOpen && (
@@ -27,7 +31,7 @@ const DialogComponent: React.FC<DialogProps> = ({  isOpen, handleClose }) => {
                 onClick={handleClick}
                 /> Yes </label>
                 <label className={styles.labelStyle}><input className={styles.checkboxStyles} type="checkbox" onClick={
-                    handleClose
+                    handleSorryClick
                 }/> Sorry </label>
               </div>
           </div>

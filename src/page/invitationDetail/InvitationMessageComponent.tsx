@@ -15,6 +15,10 @@ const InvitationMessageComponent: React.FC = () => {
   return (
     <div ref={divRef} className={styles.messageWrapper} onScroll={handleScroll}>
       <div className={styles.textWrapper}>
+        이세미 이세미 의 장녀 이세미 <br />
+        이정식 서수원 의 장남 이동호 <br />
+      </div>
+      <div className={styles.textWrapper}>
         스물셋, 스물넷에 만나 <br />
         예쁘게 연애한 지 8년, <br />
         <br />
