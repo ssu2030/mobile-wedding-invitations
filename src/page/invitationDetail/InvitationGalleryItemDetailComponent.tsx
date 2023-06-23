@@ -24,17 +24,6 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
     };
   });
 
-  const handleContainerTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    e.preventDefault();
-  };
-
-  const handleContainerTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    e.preventDefault();
-  };
-
-  const handleContainerTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
-    e.preventDefault();
-  };
   const startIndex = resource
     ? weddingPhotos.findIndex((photo) => photo.index === resource.index)
     : 0;
@@ -43,12 +32,7 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
     <div>
       {isOpen && (
         <div className={styles.dialogWrapper}>
-          <div
-            className={styles.dialogContentWrapper}
-            onTouchStart={handleContainerTouchStart}
-            onTouchMove={handleContainerTouchMove}
-            onTouchEnd={handleContainerTouchEnd}
-          >
+          <div className={styles.dialogContentWrapper}>
             <ImageGallery
               items={images}
               startIndex={startIndex}
@@ -56,10 +40,6 @@ const InvitationGalleryItemDetailComponent: React.FC<IProps> = ({
               showFullscreenButton={true}
               disableSwipe={false}
               onClick={handleClose}
-              onScroll={(e: any) => {
-                e.stopPropagation();
-                e.preventDefault();
-              }}
             />
           </div>
         </div>

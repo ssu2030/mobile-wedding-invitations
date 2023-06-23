@@ -8,7 +8,14 @@ const GalleryRow: React.FC<{ images: photoTypes[] }> = ({ images }) => {
   const [pictureResource, setPictureResource] = useState<photoTypes>();
 
   const handleClose = () => {
+    document.body.style.overflow = "auto"; // 스크롤을 원래대로 복원
     setDialogOpen(false);
+  };
+
+  const handleClickImage = (image: photoTypes) => {
+    document.body.style.overflow = "hidden"; // 스크롤을 막음
+    setPictureResource(image);
+    setDialogOpen(true);
   };
 
   return (
@@ -29,10 +36,7 @@ const GalleryRow: React.FC<{ images: photoTypes[] }> = ({ images }) => {
             overflow: "hidden",
           }}
           key={`Gallery Image ${index}`}
-          onClick={() => {
-            setPictureResource(image);
-            setDialogOpen(true);
-          }}
+          onClick={() => handleClickImage(image)}
         >
           <img
             src={image.src}
@@ -58,7 +62,6 @@ const GalleryRow: React.FC<{ images: photoTypes[] }> = ({ images }) => {
     </div>
   );
 };
-
 const InvitationGalleryComponent: React.FC = () => {
   return (
     <div
