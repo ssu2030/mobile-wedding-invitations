@@ -29,11 +29,27 @@
   }
 
 .headerMessageWrapper {
-    background-color: white;
-    padding-top:5%;
-    padding-bottom: 5%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     font-family: 'Reenie Beanie', serif;
     font-size: 2.6rem;
     user-select: none;
+    color: #47704a;
     background-color: #eb934b;
+    // background-color: #eb934b;
+    display: flex;
+    font-weight: 500;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
+
+.textWrapper {
+    width: 70vw;
+}
+
+.daisyWrapper {
+    width: 60px;
+    height: 60px;
+} 
