@@ -7,6 +7,7 @@ import { contentResource } from "common/DataTypes";
 import ImageComponent from "component/ImageComponent";
 
 import styles from "style/contents/InvitationIntroMessage.module.scss";
+import InvitationIntroDataComponent from "./InvitationIntroDateComponent";
 
 const InvitationIntroMessageComponent: React.FC = () => {
     const container = useRef(null);
@@ -37,7 +38,10 @@ const InvitationIntroMessageComponent: React.FC = () => {
                 <div className={styles.imageWrapper}>
                     <ImageComponent resources={imageResource} />
                 </div>
-                <div className={styles.bottomDivision} />
+                <div className={styles.imageTextWrapper}>
+                    <InvitationIntroDataComponent />
+                </div>
+
                 <div className={styles.lottieAnimationWrapper}>
                     <div className={styles.lottieAnimation} ref={container} />
                 </div>
