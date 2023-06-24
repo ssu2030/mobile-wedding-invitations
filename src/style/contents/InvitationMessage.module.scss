@@ -7,6 +7,8 @@
     height: 100vh;
     letter-spacing: 0.1rem;
     user-select: none;
+    max-height: 900px;
+    padding-top: 5vh;
 }
 
 .textWrapper {
@@ -15,7 +17,7 @@
 }
 
 .animationWrapper {
-    height: 36vh;
+    height: 26vh;
     width: 100%;
     overflow: hidden;
 }

@@ -1,7 +1,8 @@
 .outWrapper {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
+    height: 100vh;
+    max-height: 900px;
 }
 
 .mainWrapper {
@@ -10,8 +11,8 @@
 }
 
 .imageWrapper {
-    position: absolute;
-    padding: 30px 30px 30px 30px;
+    position: relative;
+    padding: 5vw;
     user-select: none;
     background-color: white;
 }
@@ -22,9 +23,10 @@
 }
 
 .lottieAnimation {
-    width: 100%;
-    height: 100%;
-    background-color: white;
+    position: absolute;
+    top:0px;
+    width: 90%;
+    height: 90%;
     /* 추가된 스타일 */
   }
 
@@ -53,3 +55,11 @@
     width: 60px;
     height: 60px;
 } 
+
+.bottomDivision {
+    background-color: #eb934b;
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    user-select: none;
+}

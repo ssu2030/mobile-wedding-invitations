@@ -37,6 +37,7 @@ const InvitationIntroMessageComponent: React.FC = () => {
                 <div className={styles.imageWrapper}>
                     <ImageComponent resources={imageResource} />
                 </div>
+                <div className={styles.bottomDivision} />
                 <div className={styles.lottieAnimationWrapper}>
                     <div className={styles.lottieAnimation} ref={container} />
                 </div>

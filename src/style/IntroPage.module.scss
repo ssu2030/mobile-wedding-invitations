@@ -14,14 +14,7 @@
     color: white;
     top:5%;
     right: 5px;
-    font-size: 30px;
-        @media screen and (max-width: 400px) {
-            font-size: 30px * 0.9;
-        }
-
-        @media screen and (max-width: 300px) {
-            font-size: 30px * 0.7;
-        }
+    font-size: 1.8rem;
     letter-spacing: 20px;
     font-family: 'GangwonEduAll', serif;
     user-select: none;
@@ -32,14 +25,7 @@
 
 .secondLinetext {
     color: white;
-    font-size: 18px;
-        @media screen and (max-width: 400px) {
-            font-size: 18px * 0.9;
-        }
-
-        @media screen and (max-width: 300px) {
-            font-size: 18px * 0.7;
-        }
+    font-size: 1.2rem;
     margin-bottom: 6px;
     font-family: 'MapoFlowerIsland', serif;
     user-select: none;
@@ -55,14 +41,7 @@
     padding-left:10px;
     text-align: left;
     color: white;
-    font-size: 20px;
-        @media screen and (max-width: 400px) {
-            font-size: 20px * 0.9;
-        }
-
-        @media screen and (max-width: 300px) {
-            font-size: 20px * 0.7;
-        }
+    font-size: 1.4rem;
     font-family: 'MapoFlowerIsland', serif;
     user-select: none;
     text-shadow: 2px 2px 4px black;
