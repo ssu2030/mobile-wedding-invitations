@@ -5,6 +5,7 @@ import InvitationMessageComponent from "./invitationDetail/InvitationMessageComp
 import InvitationIntroMessageComponent from "./invitationDetail/InvitationIntroMessageComponent";
 import InvitationGalleryProfileComponent from "./invitationDetail/InvitationGalleryProfileComponent";
 import InvitationMapComponent from "./invitationDetail/InvitationMapComponent";
+import InvitationFundingComponent from "./invitationDetail/InvitationFundingComponent";
 
 const InvitationPageComponent: React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const InvitationPageComponent: React.FC = () => {
                     <InvitationMessageComponent />
                     <InvitationGalleryProfileComponent />
                     <InvitationMapComponent />
+                    <InvitationFundingComponent/>
                 </div>
             </div>
         </div>
