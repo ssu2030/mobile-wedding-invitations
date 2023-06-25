@@ -21,7 +21,7 @@
     background: radial-gradient(rgba(#7600bf, 0.5) 0%, transparent 70%),
       linear-gradient(#0b161e 40%, #202076 70%);
     perspective: 700px;
-    font-size: 1.5rem; 
+    font-size: 1.2rem; 
   }
   
   
@@ -46,7 +46,7 @@
   .h1Styles {
     position: relative;
     font-family: 'Exo';
-    font-size: 6rem; /* 모바일에 적합한 폰트 크기로 수정 */
+    font-size: 5.2rem; /* 모바일에 적합한 폰트 크기로 수정 */
     margin: 0;
     transform: skew(-15deg);
     letter-spacing: 0.03em;
@@ -83,6 +83,7 @@
   }
   
   .h2Style {
+    font-size: 2rem;
     font-family: 'Mr Dafoe';
     margin: 0;/* 모바일에 적합한 폰트 크기로 수정 */
     margin-top: -0.6em;
