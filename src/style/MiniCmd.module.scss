@@ -1,0 +1,52 @@
+.cmdWindow {
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    border-radius: 4px;
+    overflow: hidden;
+  
+    .titleBar {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      background-color: #333;
+      padding: 0 10px;
+      user-select: none;
+  
+      .titleBarBtns {
+        display: flex;
+        gap: 6px;
+  
+        .titleBarBtn {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+  
+        .close {
+          background-color: #ff5f56;
+        }
+  
+        .minimize {
+          background-color: #ffbd2e;
+        }
+  
+        .expand {
+          background-color: #27c93f;
+        }
+      }
+  
+      .titleBarTitle {
+        margin-left: 8px;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  
+    .content {
+      height: calc(100% - 30px);
+      padding: 10px;
+      color: #fff;
+    }
+  }
+  

@@ -15,6 +15,7 @@ import AccordionComponent from "component/AccordionComponent";
 import NaverMapComponent from "./NaverMapComponent";
 
 import styles from "style/contents/InvitationMap.module.scss";
+import MiniCmdComponent from "component/MiniCmdComponent";
 
 const AccodionItemComponent: React.JSX.Element = (
     <>
@@ -236,7 +237,6 @@ const InvitationMapComponent: React.FC = () => {
                             </div>
                         }
                     />
-                    <div className=""></div>
                 </div>
             </div>
         </div>

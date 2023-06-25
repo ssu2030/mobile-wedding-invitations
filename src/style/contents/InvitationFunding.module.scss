@@ -90,6 +90,7 @@
     color: white;
     text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
     transform: rotate(-7deg);
+    animation: blink 4s infinite;
   }
   
   .grid {
@@ -109,3 +110,29 @@
     -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 80%);
   }
   
+  @keyframes blink {
+    0% {
+      text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    }
+    25% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        
+    }
+    63% {
+        text-shadow: none;
+    }
+    76% {
+        text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    }
+
+    89% {
+        text-shadow: none;
+    }
+
+    100% {
+      text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    }
+  }
