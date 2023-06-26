@@ -10,8 +10,8 @@ const ToastMessageComponent: React.FC<IProps> = ({ message }: IProps) => {
             style={{
                 background: "black",
                 opacity: 0.8,
-                width: "80vw",
-                height: "40vh",
+                width: "80%",
+                height: "40%",
                 color: "white",
             }}
         >
