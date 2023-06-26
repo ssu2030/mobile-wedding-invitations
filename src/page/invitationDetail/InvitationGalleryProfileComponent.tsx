@@ -13,6 +13,10 @@ const InvitationGalleryProfileComponent: React.FC = () => {
         navigate("/");
     };
 
+    const handleFollowButtonClick = () => {
+        window.alert("기능 구현 중 입니다");
+    };
+
     return (
         <div style={{ backgroundColor: "white" }}>
             <div className={styles.profile}>
@@ -78,10 +82,16 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                         </div>
                     </div>
                     <div className={styles.profileButtonArea}>
-                        <button className={styles.followButtonStyle}>
+                        <button
+                            className={styles.followButtonStyle}
+                            onClick={handleFollowButtonClick}
+                        >
                             팔로우 +
                         </button>
-                        <button className={styles.messageButtonStyle}>
+                        <button
+                            className={styles.messageButtonStyle}
+                            onClick={handleFollowButtonClick}
+                        >
                             메세지
                         </button>
                     </div>
