@@ -46,7 +46,7 @@ const InvitationFundingComponent: React.FC = () => {
                                 onClick={() => {
                                     setInputs({
                                         name: "semi",
-                                        account: "11035564626299",
+                                        account: "110355646299",
                                         bankName: "신한",
                                     });
                                     setDialogOpen(true);

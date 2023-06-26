@@ -1,26 +1,29 @@
 .mapWrapper {
     background-color: white;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
+    max-height: 900px;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
-    font-family: 'Nanum DdoBagDdoBag',sans-serif;
+    font-family: "Nanum DdoBagDdoBag", sans-serif;
     font-weight: bold;
+    padding-bottom: 30vh;
 }
 
 .titleWrapper {
+    padding-top: 5vh;
     font-size: 3rem;
-    padding-top: 8vh;
-    padding-bottom: 3vh;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .namedivsion {
-    height: 5px;
+    height: 1vh;
     width: 95%;
-    margin-top: 3vw;
+    margin-top: 1vh;
     background-color: rgb(255, 162, 23);
     margin-bottom: 4vh;
 }
@@ -28,7 +31,7 @@
 .detailInformationWrapper {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5vw;
     margin-top: 3vh;
 }
 
@@ -37,22 +40,22 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 2.5vh;
+    margin-bottom: 2vh;
     justify-content: center;
 }
 .detailInformationPhoneICONSection
 {
     user-select: none;
     width: 1.5rem;
-    height: 24px;
+    height: 2rem;
 }
 
 .detailInformationPhoneNumberSection {
     user-select: none;
-    width: 75%;
+    width: 75vw;
     display: flex;
     justify-content: left;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Nanum DdoBagDdoBag',sans-serif;
 }
 

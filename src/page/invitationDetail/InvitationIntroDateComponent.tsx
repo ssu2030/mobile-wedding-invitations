@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "style/contents/InvitationIntroDate.module.scss";
 
-const InvitationIntroDataComponent: React.FC = () => {
+const InvitationIntroDateComponent: React.FC = () => {
     return (
         <div className={styles.outter}>
             <div className={styles.wrapper}>
@@ -16,4 +16,4 @@ const InvitationIntroDataComponent: React.FC = () => {
     );
 };
 
-export default InvitationIntroDataComponent;
+export default InvitationIntroDateComponent;
