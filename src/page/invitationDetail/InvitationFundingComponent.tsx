@@ -1,5 +1,5 @@
 import MiniCmdComponent from "component/MiniCmdComponent";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "style/contents/InvitationFunding.module.scss";
 
@@ -14,6 +14,10 @@ const InvitationFundingComponent: React.FC = () => {
         account: "22040204232474",
         bankName: "국민",
     });
+
+    useEffect(() => {
+        const preload = import("component/MiniCmdComponent");
+    }, []);
 
     return (
         <>
