@@ -224,16 +224,7 @@ const InvitationMapComponent: React.FC = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <button
-                                    className={styles.mapWayButtonStyle}
-                                    onClick={() => {
-                                        window.open(
-                                            "https://namsanartweddinghall.com/blogPost/location"
-                                        );
-                                    }}
-                                >
-                                    {"오는길 보기"}
-                                </button>
+                               
                             </div>
                         }
                     />
@@ -244,3 +235,14 @@ const InvitationMapComponent: React.FC = () => {
 };
 
 export default InvitationMapComponent;
+/*
+<button
+className={styles.mapWayButtonStyle}
+onClick={() => {
+    window.open(
+        "https://namsanartweddinghall.com/blogPost/location"
+    );
+}}
+>
+{"오는길 보기"}
+</button>*/
