@@ -36,7 +36,10 @@ const InvitationIntroMessageComponent: React.FC = () => {
             </div>
             <div className={styles.mainWrapper}>
                 <div className={styles.imageWrapper}>
-                    <ImageComponent resources={imageResource} />
+                    <ImageComponent
+                        resources={imageResource}
+                        borderRadius={"12px"}
+                    />
                 </div>
                 <div className={styles.imageTextWrapper}>
                     <InvitationIntroDataComponent />

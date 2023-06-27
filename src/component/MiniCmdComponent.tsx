@@ -21,7 +21,7 @@ const MiniCmdComponent: React.FC<IProps> = ({
             {isOpen && (
                 <div className={styles.outterWrapper}>
                     <div className={styles.dialogWrapper}>
-                        <div className={styles.cmdWindow}>
+                        <div className={styles.cmdWindow} onClick={handleClose}>
                             <div className={styles.titleBar}>
                                 <div className={styles.titleBarBtns}>
                                     <div
