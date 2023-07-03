@@ -6,6 +6,7 @@ import InvitationIntroMessageComponent from "./invitationDetail/InvitationIntroM
 import InvitationGalleryProfileComponent from "./invitationDetail/InvitationGalleryProfileComponent";
 import InvitationMapComponent from "./invitationDetail/InvitationMapComponent";
 import InvitationFundingComponent from "./invitationDetail/InvitationFundingComponent";
+import InvitationCalenderComponent from "./invitationDetail/InvitationCalenderComponent";
 
 const InvitationPageComponent: React.FC = () => {
     return (
@@ -13,10 +14,11 @@ const InvitationPageComponent: React.FC = () => {
             <div className={styles.centerDivision}>
                 <div className={styles.contentWrapper}>
                     <InvitationIntroMessageComponent />
+                    <InvitationCalenderComponent year={2023} month={9} />
                     <InvitationMessageComponent />
                     <InvitationGalleryProfileComponent />
                     <InvitationMapComponent />
-                    <InvitationFundingComponent/>
+                    <InvitationFundingComponent />
                 </div>
             </div>
         </div>
