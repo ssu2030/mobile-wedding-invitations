@@ -15,9 +15,9 @@ const InvitationPageComponent: React.FC = () => {
                 <div className={styles.contentWrapper}>
                     <InvitationIntroMessageComponent />
                     <InvitationCalenderComponent year={2023} month={10} />
+                    <InvitationMapComponent />
                     <InvitationMessageComponent />
                     <InvitationGalleryProfileComponent />
-                    <InvitationMapComponent />
                     <InvitationFundingComponent />
                 </div>
             </div>
