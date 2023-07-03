@@ -26,13 +26,24 @@ const InvitationCalenderComponent: React.FC<CalendarProps> = ({
         .reverse();
     const daysToShow = [...prevMonthDays, ...calendarDays];
 
+    // 요일 배열
+    const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
     return (
-        <div className={style.calendar}>
-            {daysToShow.map((day) => (
-                <div key={day} className={style.calendarDay}>
-                    {day}
-                </div>
-            ))}
+        <div className={style.outWrapper}>
+            <div className={style.monthWrapper}>{"OCTOVER"}</div>
+            <div className={style.calendar}>
+                {weekDays.map((day) => (
+                    <div key={day} className={style.calendarDay}>
+                        {day}
+                    </div>
+                ))}
+                {daysToShow.map((day) => (
+                    <div key={day} className={style.calendarDay}>
+                        {day}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

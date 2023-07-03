@@ -1,14 +1,39 @@
+.outWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    height: 100vh;
+    max-height: 900px;
+    background-color: aquamarine;
+}
+
 .calendar {
+    padding: 4%;
+    background-color: brown;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 8px;
-  }
-  
-  .calendarDay {
+}
+
+.calendarDay {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
     border: 1px solid #ccc;
     background-color: #f7f7f7;
-  }
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.monthWrapper {
+    margin-top: 5vh;
+    font-size: 2rem;
+    margin-bottom: 10vh;
+}
+
+.weekDay {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
