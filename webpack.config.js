@@ -79,11 +79,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-  }),
     // HtmlWebpackPlugin을 플러그인으로 추가
     // 이 플러그인은 src/index.html을 기반으로 HTML 파일을 생성 및 번들링된 파일 주입
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+    //  CSS 파일을 별도로 추출하여 번들링된 JavaScript 파일과 분리하는 역할
+    // name은 엔트리 포인트 contenthash는 알아서 잘 치환됨
   ],
 
   devServer: {
