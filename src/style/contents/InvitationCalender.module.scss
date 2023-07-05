@@ -4,32 +4,43 @@
     min-height: 700px;
     height: 100vh;
     max-height: 900px;
-    background-color: aquamarine;
+    background-color: #eb934b;
+    text-align: center;
 }
 
 .calendar {
-    padding: 4%;
-    background-color: brown;
+    padding: 6%;
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 8px;
 }
 
-.calendarDay {
+@mixin sharedCalenderDay {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
-    border: 1px solid #ccc;
-    background-color: #f7f7f7;
     font-weight: bold;
-    background-color: #e0e0e0;
+    background-color: white;
 }
+
+.calendarDay {
+    @include sharedCalenderDay;
+    color: black;
+}
+
+.dDay {
+    @include sharedCalenderDay;
+    color: #eb934b;
+}
+
 
 .monthWrapper {
     margin-top: 5vh;
     font-size: 2rem;
-    margin-bottom: 10vh;
+    margin-bottom: 10%;
+    height: 10%;
 }
 
 .weekDay {
@@ -37,3 +48,11 @@
     background-color: #e0e0e0;
 }
 
+
+.textWrapper {
+    padding-top:10%
+}
+
+.dateRemainWrapper {
+
+}

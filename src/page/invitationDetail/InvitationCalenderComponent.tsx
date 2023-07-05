@@ -1,5 +1,4 @@
 import React from "react";
-
 import style from "style/contents/InvitationCalender.module.scss";
 
 interface CalendarProps {
@@ -13,21 +12,22 @@ const InvitationCalenderComponent: React.FC<CalendarProps> = ({
 }) => {
     const daysInMonth = new Date(year, month, 0).getDate();
     const firstDayOfWeek = new Date(year, month - 1, 1).getDay();
-
-    // 이전 달의 마지막 날짜를 계산합니다.
     const prevMonthLastDay = new Date(year, month - 1, 0).getDate();
-
-    // 현재 달력의 날짜 배열을 생성합니다.
     const calendarDays = [...Array(daysInMonth).keys()].map((day) => day + 1);
-
-    // 이전 달의 일부 날짜를 추가합니다.
     const prevMonthDays = [...Array(firstDayOfWeek).keys()]
         .map((day) => prevMonthLastDay - day)
         .reverse();
     const daysToShow = [...prevMonthDays, ...calendarDays];
-
-    // 요일 배열
     const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+    // 현재 날짜를 가져옵니다.
+    const now = new Date();
+    // 목표 날짜를 설정합니다.
+    const weddingDate = new Date(2023, 9, 22); // JavaScript의 월은 0부터 시작하므로 10월은 9입니다.
+    // 두 날짜의 차이를 밀리초 단위로 계산합니다.
+    const diff = weddingDate.getTime() - now.getTime();
+    // 밀리초를 일 단위로 변환합니다.
+    const daysLeft = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
     return (
         <div className={style.outWrapper}>
@@ -39,10 +39,18 @@ const InvitationCalenderComponent: React.FC<CalendarProps> = ({
                     </div>
                 ))}
                 {daysToShow.map((day) => (
-                    <div key={day} className={style.calendarDay}>
+                    <div
+                        key={day}
+                        className={day !== 22 ? style.calendarDay : style.dDay}
+                    >
                         {day}
                     </div>
                 ))}
+            </div>
+            <div className={style.textWrapper}>
+                {"세미 & 동호의 결혼식이 "}
+                <span style={{ color: "red" }}>{daysLeft}</span>
+                {"일 남았습니다."}
             </div>
         </div>
     );
