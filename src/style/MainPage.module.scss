@@ -71,6 +71,21 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Allerta Stencil';
+    src: url('../resource/font/subset-AllertaStencil-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dongle';
+    src: url('../resource/font/subset-Dongle-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 .mainWrapper {
     width: 100%;

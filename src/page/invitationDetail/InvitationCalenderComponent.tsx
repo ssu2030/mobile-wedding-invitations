@@ -36,7 +36,7 @@ const InvitationCalenderComponent: React.FC<CalendarProps> = ({
                 {weekDays.map((day) => (
                     <div key={day} className={style.calendarDay}>
                         {day}
-                    </div>
+                    </div> //Dongle //Allerta Stencil
                 ))}
                 {daysToShow.map((day) => (
                     <div
@@ -49,8 +49,8 @@ const InvitationCalenderComponent: React.FC<CalendarProps> = ({
             </div>
             <div className={style.textWrapper}>
                 {"세미 & 동호의 결혼식이 "}
-                <span style={{ color: "red" }}>{daysLeft}</span>
-                {"일 남았습니다."}
+                <span style={{ color: "red" }}>{`${daysLeft}일`}</span>
+                {" 남았습니다."}
             </div>
         </div>
     );

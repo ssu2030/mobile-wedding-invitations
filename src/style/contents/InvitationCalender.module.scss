@@ -6,10 +6,12 @@
     max-height: 900px;
     background-color: #eb934b;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .calendar {
-    padding: 6%;
+    padding: 10%;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -23,6 +25,7 @@
     height: 40px;
     font-weight: bold;
     background-color: white;
+    font-family: 'Allerta Stencil',sans-serif;
 }
 
 .calendarDay {
@@ -37,10 +40,14 @@
 
 
 .monthWrapper {
-    margin-top: 5vh;
-    font-size: 2rem;
+    margin-top: 10%;
+    font-family: 'Allerta Stencil',sans-serif;
+    font-size: 3rem;
+    width: 100%;
     margin-bottom: 10%;
+    color:#47704a;
     height: 10%;
+    user-select: none;
 }
 
 .weekDay {
@@ -48,11 +55,15 @@
     background-color: #e0e0e0;
 }
 
-
 .textWrapper {
-    padding-top:10%
+    border: 1px none;
+    border-radius: 20px;
+    width: 75%;
+    background-color: #f8d7bb;
+    margin-top: 10%;
+    font-size: 1.6rem;
+    font-family: 'Dongle',sans-serif;
+    margin-bottom: 10%;
+    user-select: none;
 }
 
-.dateRemainWrapper {
-
-}
