@@ -13,6 +13,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
     const navigate = useNavigate();
     const [follow, setFollow] = useState(false);
     const [open, setOpen] = useState(false);
+    const [follower, setFollower] = useState(2023);
 
     const handleProfileImgClick = () => {
         setOpen(false);
@@ -24,6 +25,16 @@ const InvitationGalleryProfileComponent: React.FC = () => {
 
     const handleFollowButtonClick = () => {
         window.alert("기능 구현 중 입니다");
+    };
+
+    const handleFollowClick = () => {
+        if (follow === false) {
+            setFollow(true);
+            setFollower(2024);
+        } else {
+            setFollow(false);
+            setFollower(2023);
+        }
     };
 
     return (
@@ -69,7 +80,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                         </div>
                         <div className={styles.profileStatsItemBox}>
                             <div className={styles.profileStatsItemNumber}>
-                                2023
+                                {`${follower}`}
                             </div>
                             <div className={styles.profileStatsItemValue}>
                                 팔로워
@@ -101,9 +112,7 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                                     ? styles.followButtonStyle
                                     : styles.follingButtonStyle
                             }
-                            onClick={() => {
-                                setFollow(true);
-                            }}
+                            onClick={handleFollowClick}
                         >
                             {follow === false ? "팔로우 +" : "팔로잉 "}
                             {follow && (
