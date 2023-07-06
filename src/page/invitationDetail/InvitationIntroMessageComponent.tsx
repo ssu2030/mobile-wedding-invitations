@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
+
 import lottie from "lottie-web";
 import animationData from "resource/ConfetiAnimation.json";
 import confeti_img from "@photo/confetiImage.webp";
 import daisy_img from "@photo/daisyInvitation.webp";
 import { contentResource } from "common/DataTypes";
 import ImageComponent from "component/ImageComponent";
+import InvitationIntroDataComponent from "./InvitationIntroDateComponent";
 
 import styles from "style/contents/InvitationIntroMessage.module.scss";
-import InvitationIntroDataComponent from "./InvitationIntroDateComponent";
 
 const InvitationIntroMessageComponent: React.FC = () => {
     const container = useRef(null);

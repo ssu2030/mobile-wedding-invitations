@@ -10,12 +10,10 @@ import {
 } from "common/WeddingInformation";
 
 import hanMapImage from "@photo/handMap.webp";
-
 import AccordionComponent from "component/AccordionComponent";
 import NaverMapComponent from "./NaverMapComponent";
 
 import styles from "style/contents/InvitationMap.module.scss";
-import MiniCmdComponent from "component/MiniCmdComponent";
 
 const AccodionItemComponent: React.JSX.Element = (
     <>
@@ -224,7 +222,6 @@ const InvitationMapComponent: React.FC = () => {
                                         </button>
                                     </div>
                                 </div>
-                               
                             </div>
                         }
                     />

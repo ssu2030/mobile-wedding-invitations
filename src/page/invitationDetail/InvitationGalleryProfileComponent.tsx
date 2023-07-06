@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import backButton from "@photo/backButton.webp";
 import profileImage from "@photo/profile.webp";
@@ -6,9 +6,11 @@ import profileImage from "@photo/profile.webp";
 import styles from "style/contents/InvitationGalleryProfile.module.scss";
 import { useNavigate } from "react-router-dom";
 import InvitationGalleryComponent from "./InvitationGalleryComponent";
+import down_img from "@photo/icon/down.png";
 
 const InvitationGalleryProfileComponent: React.FC = () => {
     const navigate = useNavigate();
+    const [follow, setFollow] = useState(false);
     const handlerBackButtonClick = () => {
         navigate("/");
     };
@@ -83,10 +85,25 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                     </div>
                     <div className={styles.profileButtonArea}>
                         <button
-                            className={styles.followButtonStyle}
-                            onClick={handleFollowButtonClick}
+                            className={
+                                follow === false
+                                    ? styles.followButtonStyle
+                                    : styles.follingButtonStyle
+                            }
+                            onClick={() => {
+                                setFollow(true);
+                            }}
                         >
-                            팔로우 +
+                            {follow === false ? "팔로우 +" : "팔로잉 "}
+                            {follow && (
+                                <span>
+                                    <img
+                                        src={down_img}
+                                        alt=""
+                                        style={{ width: "0.7rem" }}
+                                    />
+                                </span>
+                            )}
                         </button>
                         <button
                             className={styles.messageButtonStyle}

@@ -124,6 +124,13 @@
     color: white;
 }
 
+.follingButtonStyle {
+    @include sharedButton;
+    background-color: #e9e9e9;
+    color: black;
+}
+
+
 .messageButtonStyle {
     @include sharedButton;
     background-color: #e9e9e9;
