@@ -7,10 +7,17 @@ import styles from "style/contents/InvitationGalleryProfile.module.scss";
 import { useNavigate } from "react-router-dom";
 import InvitationGalleryComponent from "./InvitationGalleryComponent";
 import down_img from "@photo/icon/down.png";
+import DialogImgComponent from "component/DialogImgComponent";
 
 const InvitationGalleryProfileComponent: React.FC = () => {
     const navigate = useNavigate();
     const [follow, setFollow] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const handleProfileImgClick = () => {
+        setOpen(false);
+    };
+
     const handlerBackButtonClick = () => {
         navigate("/");
     };
@@ -36,14 +43,18 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                     <div className={styles.idWrapper}> {"semi.and.dongho"}</div>
                 </div>
                 <div className={styles.profileTop}>
-                    <div className={styles.profileImage}>
+                    <div
+                        className={styles.profileImage}
+                        onClick={() => {
+                            setOpen(true);
+                        }}
+                    >
                         <img
+                            className={styles.profileImage}
                             src={profileImage}
                             alt={""}
-                            style={{
-                                width: "100px",
-                                height: "100px",
-                                borderRadius: "50%",
+                            onClick={() => {
+                                setOpen(true);
                             }}
                         />
                     </div>
@@ -115,6 +126,12 @@ const InvitationGalleryProfileComponent: React.FC = () => {
                 </div>
             </div>
             <InvitationGalleryComponent />
+            {open && (
+                <DialogImgComponent
+                    isOpen={open}
+                    handleClose={handleProfileImgClick}
+                />
+            )}
         </div>
     );
 };
